@@ -48,16 +48,13 @@ class Home extends Component{
 
     submitHandler = e => {
 
-        alert(`${this.state.fname} ${this.state.lname} ${this.state.age} ${this.state.email} ${this.state.password} ${this.state.checkpassword} `)
+        if (this.state.password.value == this.state.checkpassword.value) {
+            alert("הצלחה")
+           }
         
     }
 
-    passwordValueCheck(){
-       if (this.state.password.value == this.state.checkpassword.value) {
-        alert("הצלחה")
-        
-       }
-    }
+ 
    
 
     render(){
