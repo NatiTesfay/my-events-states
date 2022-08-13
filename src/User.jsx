@@ -9,6 +9,7 @@ class User extends Component{
         age:"",
         email:"",
         password:"",
+        fullValue:false,
         };
     }
     hanlderFname = (event)=>{
@@ -29,6 +30,8 @@ class User extends Component{
     hanlderpassword = (event)=>{
         this.setState({password:event.target.value})
     }
+     
+ 
 
     render(){
         return(
@@ -37,23 +40,49 @@ class User extends Component{
                 <form action="">
              <input type="text" placeholder="First name" value={this.state.firstname} onChange={this.hanlderFname} />
              <button>Click</button>
-             <br />
              <input type="text" placeholder="Last name" value={this.state.lastname} onChange={this.hanlderlname} />
              <button>Click</button>
-             <br />
              <input type="age" placeholder="age" value={this.state.age} onChange={this.hanlderFage} />
              <button>Click</button>
-             <br />
              <input type="email" placeholder="email" value={this.state.email} onChange={this.hanlderFemail} />
              <button>Click</button>
-             <br />
              <input type="password" placeholder="password" value={this.state.password} onChange={this.hanlderpassword} />
              <button>Click</button>
-             <br />
                 </form>
+              
             </div>
         )
+        
     }
+    
 }
 
 export default User;
+inputValue = (e)=>{
+    switch (e,key) {
+     case firstname:
+         this.setState({ firstname: e.target.value })
+         break;
+    
+     case lastname:
+         this.setState({ lastname: e.target.value })
+         break;
+    
+     case age:
+         this.setState({ age: e.target.value })
+         break;
+    
+     case email:
+         this.setState({ email: e.target.value })
+         break;
+    
+     case password:
+         this.setState({ password: e.target.value })
+         break;
+    
+     default:
+         break;
+    }
+    alert("yes")
+   }
+
