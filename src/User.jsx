@@ -30,17 +30,11 @@ class User extends Component{
         this.setState({password:event.target.value})
     }
 
-    submitBnt = () =>{
-      
-    }
-
-    
-
     render(){
         return(
             <div>
                 <h1>Form 2</h1>
-                <form onSubmit={submitBnt}>
+                <form action="">
              <input type="text" placeholder="First name" value={this.state.firstname} onChange={this.hanlderFname} />
              <button>Click</button>
              <br />
@@ -56,7 +50,6 @@ class User extends Component{
              <input type="password" placeholder="password" value={this.state.password} onChange={this.hanlderpassword} />
              <button>Click</button>
              <br />
-             <button>Post</button>
                 </form>
             </div>
         )
