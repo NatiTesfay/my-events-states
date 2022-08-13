@@ -9,7 +9,7 @@ class Home extends Component{
         age:"",
         email:"",
         password:"",
-        checkpassword:"",
+        confirmPassword:"",
     };
 
 
@@ -42,7 +42,7 @@ class Home extends Component{
     }
     handlePasswordCheck = (event) =>{
          this.setState({
-            checkpassword:event.target.value
+            confirmPassword:event.target.value
          })
     }
 
@@ -61,7 +61,7 @@ class Home extends Component{
         return(
             <div>
              <h1>
-                Form
+                Form 1
              </h1>
              <form onSubmit={this.submitHandler}>
              <label>UserName</label>
@@ -94,3 +94,6 @@ class Home extends Component{
     
 }
 export default Home;
+
+
+
