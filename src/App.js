@@ -1,5 +1,10 @@
 import './App.css';
 import Home from './Home.component';
+import Table from './Table'
+
+
+
+
 
 
 
@@ -8,7 +13,10 @@ function App() {
     <div>
      
      <Home/>
+     <Table/>
     
+
+
     </div>
   );
 }
