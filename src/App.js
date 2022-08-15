@@ -1,13 +1,14 @@
 import './App.css';
-import Home from "./Home.jsx";
-import User from './User';
+import Home from './Home.component';
+
 
 
 function App() {
   return (
     <div>
+     
      <Home/>
-     <User/>
+    
     </div>
   );
 }

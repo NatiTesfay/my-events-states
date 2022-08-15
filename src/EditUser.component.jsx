@@ -1,15 +1,16 @@
 import {Component} from "react";
 
-class Home extends Component{
+
+export default class EditUser extends Component{
     constructor(){
     super()
     this.state={
-        fname:"",
-        lname:"",
-        age:"",
-        email:"",
-        password:"",
-        confirmPassword:"",
+        fname:"NATI",
+        lname:"TESFAY",
+        age:"23",
+        email:"NETANELTES66@ESFV",
+        password:"4444",
+        confirmPassword:"4444",
     };
 
 
@@ -47,11 +48,9 @@ class Home extends Component{
     }
 
     submitHandler = e => {
-
-        if (this.state.password.value == this.state.checkpassword.value) {
+        if (this.state.password.target.value == this.state.checkpassword.target.value) {
             alert("הצלחה")
            }
-        
     }
 
  
@@ -66,34 +65,35 @@ class Home extends Component{
              <form onSubmit={this.submitHandler}>
              <label>UserName</label>
              <input type="text" placeholder="First name" value={this.state.fname} onChange={this.hanlderFname} />
-             <button>Click</button>
+         
              <br />
              <label>UseLName</label>
              <input type="text" placeholder="Last name" value={this.state.lname} onChange={this.handleLname} />
-             <button>Click</button>
+            
              <br />
              <label>UserAge</label>
              <input age="age" placeholder="Age" value={this.state.age} onChange={this.hanldeAge} />
-             <button>Click</button>
+         
              <br />
              <label>UserEmail</label>
              <input email="email" placeholder="Email" value={this.state.email} onChange={this.handleEmail} />
-             <button>Click</button>
+           
              <br />
              <label>UserPassWord</label>
              <input password="password" placeholder="password" value={this.state.password} onChange={this.hadlePassword} />
-             <button>Click</button>
+           
              <br />
              <label>UserPassWord</label>
-             <input password="password" placeholder="passwordCheck" value={this.state.checkpassword} onChange={this.handlePasswordCheck} />
-             <button>Click</button>
+             <input password="password" placeholder="passwordCheck" value={this.state.confirmPassword} onChange={this.handlePasswordCheck} />
+             <button onCanPlay={this.submitHandler}>Click</button>
              </form>
             </div>
         )
+        
     }
     
 }
-export default Home;
+
 
 
 
